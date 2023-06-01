@@ -97,11 +97,11 @@ Propagation Delay :  the time difference between when the transitional input rea
 Propagation delay = time(out_thr) - time(in_thr)
 
 `
+
 **Transition time or Slew**
 
 `
 Rise transition time = time(slew_high_rise_thr) - time (slew_low_rise_thr)
-
 `
 
 `
