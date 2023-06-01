@@ -44,5 +44,25 @@ Detailed Placement: It alters the position of cells post global placement so as 
 Legalisation of cells is important from timing point of view.
 Optimization is stage where we estimate the lenght and capictance, based on that we add buffers. Ideally, Optimization is done for better timing.
 
+Congestion aware Placement using Replace
+
+
+
 Need for libraries and characterization
+
+As we know, From logic synthesis to routing and STA, each and evry stage has one thing in common i.e., logic gates/ logic cells. In order for the tool understand these gates are and their timing, we need to characterize these cells. 
+
+CELL DESIGN AND CHARACETRIZATION FLOWS
+
+Library is a place where we get information about every cell. It has differents cells with different size, functionality,threshold voltages. There is a typical cell design flow steps.
+1. Inputs
+2. Design Steps
+3. **Outputs**
+Inputs for cell design flow
+
+   PDKS(process design kit) : DRC & LVS, SPICE Models, library & user-defined specs.
+2.
+
+
+
 
