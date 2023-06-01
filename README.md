@@ -4,8 +4,7 @@
    This is repo of Workshop Day2. In this we cover Floorplanning key parameters, running floorplan and placement using openlane and review layout in magic.
 
 ## Table of contents  
-
- 1. Floorplanning considerations
+1. Floorplanning considerations
     - Utilization factor and Aspect Ratio
     - Pre-placed cells
     - Decoupling capcitors
@@ -20,8 +19,6 @@
  3. Cell design and characterization
     - Standard Cell characterization flow
  4. Timing Characterization
-    
-
 
 ### 1. Floorplanning considerations
 
