@@ -3,7 +3,7 @@ FLOORPLANNING, LIBRARY CELLS and PLACEMENT
 
 Table of contents  
 # Floorplanning considerations
-** Utilization Factor & Aspect Ratio
+** Utilization Factor & Aspect Ratio **
 
 When it comes to floorplanning, the shape and size of the fllorplan is decided by Aspect Ratio and how good the floor plan is decided by Utilisation Factor. They are defined as follows:
 
@@ -75,18 +75,33 @@ A typical standard cell characterization flow that is followed in the industry i
 Now all these 8 steps are fed in together as a configuration file to a characterization software called GUNA. This software generates timing, noise, power models.
 These .libs are classified as Timing characterization, power characterization and noise characterization.
 
-#TIMING CHARACTERIZATION
+# TIMING CHARACTERIZATION
 
-**Timing threshold definitions**
-Timing defintion	Value
-slew_low_rise_thr	20% value
-slew_high_rise_thr	80% value
-slew_low_fall_thr	20% value
-slew_high_fall_thr	80% value
-in_rise_thr	50% value
-in_fall_thr	50% value
-out_rise_thr	50% value
-out_fall_thr	50% value
+** Timing threshold definitions **
+Timing defintion |	Value
+-------------- | --------------
+slew_low_rise_thr	| 20% value
+slew_high_rise_thr | 80% value
+slew_low_fall_thr |	20% value
+slew_high_fall_thr |	80% value
+in_rise_thr	| 50% value
+in_fall_thr |	50% value
+out_rise_thr |	50% value
+out_fall_thr | 50% value
+
+** Propagation Delay and Transition Time **
+
+Propagation Delay :  the time difference between when the transitional input reaches 50% of its final value and when the output reaches 50% of its final value. Poor choice of threshold values lead to negative delay values. Even thought you have taken good threshold values, sometimes depending upon how good or bad the slew, the dealy might be still +ve or -ve.
+`
+Propagation delay = time(out_thr) - time(in_thr)
+`
+**Transition time or Slew**
+
+`
+Rise transition time = time(slew_high_rise_thr) - time (slew_low_rise_thr)
+Low transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
+`
+
 
 
 
