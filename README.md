@@ -32,10 +32,7 @@ Pin Placement
 The netlist is the logical connectivity between cells. The area between the core and die is utilised for placing I/O pins. The connectivity information is defined in either VHDL or Verilog and is used to determine the position of I/O pins of various ports. Then, logical cell placement is bloackage is done inorder to avoid any cells getting placed by automated PnR.
 
 #### Floorplan run on OpenLANE & view in Magic
-* Importance files in increasing priority order:
-1. ```floorplan.tcl``` - System default envrionment variables
-2. ```conifg.tcl```
-3. ```sky130A_sky130_fd_sc_hd_config.tcl```
+
 * Floorplan envrionment variables or switches:
 1. ```FP_CORE_UTIL``` - core utilization percentage
 2. ```FP_ASPECT_RATIO``` - the cores aspect ratio
@@ -45,6 +42,11 @@ The netlist is the logical connectivity between cells. The area between the core
 6. ```FP_CORE_HMETAL``` - horizontal metal layer where I/O pins are placed
  
 ***Note: Usually, the parameter values for vertical metal layer and horizontal metal layer will be 1 more than that specified in the files***
+
+* Importance files in increasing priority order:
+1. ```floorplan.tcl``` - System default settings
+2. ```conifg.tcl```
+3. ```sky130A_sky130_fd_sc_hd_config.tcl```
  
  To run the picorv32a floorplan in openLANE:
  
