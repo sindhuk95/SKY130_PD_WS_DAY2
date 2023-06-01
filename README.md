@@ -100,11 +100,9 @@ Propagation delay = time(out_thr) - time(in_thr)
 **Transition time or Slew**
 
 `
-
 Rise transition time = time(slew_high_rise_thr) - time (slew_low_rise_thr)
 
 Low transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
-
 `
 
 
