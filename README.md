@@ -55,13 +55,33 @@ As we know, From logic synthesis to routing and STA, each and evry stage has one
 CELL DESIGN AND CHARACETRIZATION FLOWS
 
 Library is a place where we get information about every cell. It has differents cells with different size, functionality,threshold voltages. There is a typical cell design flow steps.
-1. Inputs
-2. Design Steps
-3. **Outputs**
-Inputs for cell design flow
+1. Inputs : PDKS(process design kit) : DRC & LVS, SPICE Models, library & user-defined specs.
+2. Design Steps :Circuit design, Layout design (Art of layout Euler's path and stick diagram), Extraction of parasitics, Characterization (timing, noise, power).
+3. Outputs: CDL (circuit description language), LEF, GDSII, extracted SPICE netlist (.cir), timing, noise and power .lib files
 
-   PDKS(process design kit) : DRC & LVS, SPICE Models, library & user-defined specs.
-2.
+Standard Cell Characterization Flow
+
+A typical standard cell characterization flow that is followed in the industry includes the following steps:
+
+1.Read in the models and tech files
+2. Read extracted spice netlist
+3 .Recognise behaviour of the cell
+4. Read the subcircuits
+5. Attach power sources
+6. Apply stimulus to characterization setup
+7. Provide necessary output capacitance loads
+8. Provide necessary simulation commands
+
+Now all these 8 steps are fed in together as a configuration file to a characterization software called GUNA. This software generates timing, noise, .lib and power models.
+the .lib 
+
+
+
+   
+
+
+
+   
 
 
 
