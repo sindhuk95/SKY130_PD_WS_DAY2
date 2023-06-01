@@ -72,8 +72,22 @@ A typical standard cell characterization flow that is followed in the industry i
 7. Provide necessary output capacitance loads
 8. Provide necessary simulation commands
 
-Now all these 8 steps are fed in together as a configuration file to a characterization software called GUNA. This software generates timing, noise, .lib and power models.
-the .lib 
+Now all these 8 steps are fed in together as a configuration file to a characterization software called GUNA. This software generates timing, noise, power models.
+These .libs are classified as Timing characterization, power characterization and noise characterization.
+
+#TIMING CHARACTERIZATION
+
+**Timing threshold definitions**
+Timing defintion	Value
+slew_low_rise_thr	20% value
+slew_high_rise_thr	80% value
+slew_low_fall_thr	20% value
+slew_high_fall_thr	80% value
+in_rise_thr	50% value
+in_fall_thr	50% value
+out_rise_thr	50% value
+out_fall_thr	50% value
+
 
 
 
