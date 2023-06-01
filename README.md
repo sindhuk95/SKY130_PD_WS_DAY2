@@ -51,9 +51,9 @@ As we know, there are millions of cells in our design and its hard to supplu pow
 
 The netlist is the logical connectivity between cells. The area between the core and die is utilised for placing I/O pins. The connectivity information is defined in either VHDL or Verilog and is used to determine the position of I/O pins of various ports. Then, logical cell placement is bloackage is done inorder to avoid any cells getting placed by automated PnR.
 
-#### Floorplan run on OpenLANE & review layout in Magic
+### Floorplan run on OpenLANE & review layout in Magic
 
-* Floorplan envrionment variables or switches:
+#### Floorplan envrionment variables or switches:
 1. ```FP_CORE_UTIL``` - core utilization percentage
 2. ```FP_ASPECT_RATIO``` - the cores aspect ratio
 3. ```FP_CORE_MARGIN``` - The length of the margin surrounding the core area
@@ -63,7 +63,7 @@ The netlist is the logical connectivity between cells. The area between the core
  
 ***Note: Usually, the parameter values for vertical metal layer and horizontal metal layer will be 1 more than that specified in the files***
 
-* Importance files in increasing priority order:
+#### Importance files in increasing priority order:
 1. ```floorplan.tcl``` - System default settings
 2. ```conifg.tcl```
 3. ```sky130A_sky130_fd_sc_hd_config.tcl```
@@ -151,22 +151,14 @@ Library is a place where we get information about every cell. It has differents 
 
 A typical standard cell characterization flow that is followed in the industry includes the following steps:
 
-
-1.Read in the models and tech files
-
-2. Read extracted spice netlist
- 
-3 .Recognise behaviour of the cell
-
+1. Read in the models and tech files
+2. Read extracted spice Netlist
+3. Recognise behavior of the cells
 4. Read the subcircuits
-
 5. Attach power sources
-
 6. Apply stimulus to characterization setup
-
-7. Provide necessary output capacitance loads
-
-8. Provide necessary simulation commands
+7. Provide neccesary output capacitance loads
+8. Provide neccesary simulation commands
 
 Now all these 8 steps are fed in together as a configuration file to a characterization software called GUNA. This software generates timing, noise, power models.
 These .libs are classified as Timing characterization, power characterization and noise characterization.
@@ -175,7 +167,7 @@ These .libs are classified as Timing characterization, power characterization an
 
 ### 4. TIMING CHARACTERIZATION
 
-** Timing threshold definitions **
+### Timing threshold definitions 
 Timing defintion |	Value
 -------------- | --------------
 slew_low_rise_thr	| 20% value
@@ -187,7 +179,7 @@ in_fall_thr |	50% value
 out_rise_thr |	50% value
 out_fall_thr | 50% value
 
-** Propagation Delay and Transition Time **
+### Propagation Delay and Transition Time 
 
 Propagation Delay :  the time difference between when the transitional input reaches 50% of its final value and when the output reaches 50% of its final value. Poor choice of threshold values lead to negative delay values. Even thought you have taken good threshold values, sometimes depending upon how good or bad the slew, the dealy might be still +ve or -ve.
 
@@ -195,7 +187,7 @@ Propagation Delay :  the time difference between when the transitional input rea
 Propagation delay = time(out_thr) - time(in_thr)
 ```
 
-** Transition time or Slew **
+### Transition time or Slew 
 
 The time it takes the signal to move between states is the transition time , where the time is measured between 10% and 90% or 20% to 80% of the signal levels.
 
