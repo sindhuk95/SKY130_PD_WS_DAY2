@@ -58,8 +58,10 @@ Library is a place where we get information about every cell. It has differents 
 1. Inputs : PDKS(process design kit) : DRC & LVS, SPICE Models, library & user-defined specs.
 2. Design Steps :Circuit design, Layout design (Art of layout Euler's path and stick diagram), Extraction of parasitics, Characterization (timing, noise, power).
 3. Outputs: CDL (circuit description language), LEF, GDSII, extracted SPICE netlist (.cir), timing, noise and power .lib files
+     ![image](https://github.com/sindhuk95/later/assets/135046169/87348350-fa25-4ef8-99f4-1cdddf070f10)
 
-Standard Cell Characterization Flow
+
+  # Standard Cell Characterization Flow
 
 A typical standard cell characterization flow that is followed in the industry includes the following steps:
 
@@ -97,7 +99,7 @@ Propagation Delay :  the time difference between when the transitional input rea
 Propagation delay = time(out_thr) - time(in_thr)
 ```
 
-**Transition time or Slew**
+** Transition time or Slew **
 
 
 ```
