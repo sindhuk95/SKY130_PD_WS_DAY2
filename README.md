@@ -63,20 +63,20 @@ To view the floorplan, Magic is invoked after moving to the results/floorplan di
 
 magic -T /home/vsduser/Desktop/work.tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
 
-![Capture8](https://github.com/sindhuk95/later/assets/135046169/7a6d7cf4-aa7a-49c5-984b-d35a1f01b8d6)
-
 One can zoom into Magic layout by selecting an area with left and right mouse click followed by pressing "z" key.
 Various components can be identified by using the what command in tkcon window after making a selection on the component.
 Zooming in also provides a view of decaps present in picorv32a chip.
 The standard cell can be found at the bottom left corner.
 
+![Capture8](https://github.com/sindhuk95/later/assets/135046169/7a6d7cf4-aa7a-49c5-984b-d35a1f01b8d6)
+
 ![Capture7](https://github.com/sindhuk95/later/assets/135046169/c5b43949-39c2-45f6-a986-0ecbbe9a046d)
+
+![image](https://github.com/sindhuk95/later/assets/135046169/d0b3526a-989c-4def-b30d-69ac9e85cc8e)
 
 You can clearly see Decap cells and Tap cells
 
 ![Capture9](https://github.com/sindhuk95/later/assets/135046169/146ceead-f8b2-4e19-b8bb-2468136063ef)
-
-
 
 
 Library Binding and Placement
@@ -89,12 +89,21 @@ Placement Optimization
 
 The next step is placement. Once we initial the design, the logic cells in netlist in its physical dimisoins is placed on the floorplan. Placement is perfomed in 2 stages:
 
-Global Placement: Cells will be placed randomly in optimal positions which may not be legal and cells may overlap. 
+Global Placement: Cells will be placed randomly in optimal positions which may not be legal and cells may overlap. Optimization is done through reduction of half parameter wire length.
 Detailed Placement: It alters the position of cells post global placement so as to legalise them.
 Legalisation of cells is important from timing point of view.
 Optimization is stage where we estimate the lenght and capictance, based on that we add buffers. Ideally, Optimization is done for better timing.
 
-Congestion aware Placement using Replace
+Congestion aware Placement using Replace 
+
+Post placement, the design can be viewed on magic within results/placement directory:
+
+magic -T /home/vsduser/Desktop/work.tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def
+
+
+![image](https://github.com/sindhuk95/later/assets/135046169/d8cf5b7c-1248-4382-8583-9bf9da0dab50)
+
+![image](https://github.com/sindhuk95/later/assets/135046169/4146e0ad-475c-4c06-ab11-bc36d9821daf)
 
 
 
@@ -108,6 +117,7 @@ Library is a place where we get information about every cell. It has differents 
 1. Inputs : PDKS(process design kit) : DRC & LVS, SPICE Models, library & user-defined specs.
 2. Design Steps :Circuit design, Layout design (Art of layout Euler's path and stick diagram), Extraction of parasitics, Characterization (timing, noise, power).
 3. Outputs: CDL (circuit description language), LEF, GDSII, extracted SPICE netlist (.cir), timing, noise and power .lib files
+
      ![image](https://github.com/sindhuk95/later/assets/135046169/87348350-fa25-4ef8-99f4-1cdddf070f10)
 
 
