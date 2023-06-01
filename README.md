@@ -64,10 +64,20 @@ To view the floorplan, Magic is invoked after moving to the results/floorplan di
 magic -T /home/vsduser/Desktop/work.tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
 
 ![Capture8](https://github.com/sindhuk95/later/assets/135046169/7a6d7cf4-aa7a-49c5-984b-d35a1f01b8d6)
+
+One can zoom into Magic layout by selecting an area with left and right mouse click followed by pressing "z" key.
+Various components can be identified by using the what command in tkcon window after making a selection on the component.
+Zooming in also provides a view of decaps present in picorv32a chip.
+The standard cell can be found at the bottom left corner.
+
 ![Capture7](https://github.com/sindhuk95/later/assets/135046169/c5b43949-39c2-45f6-a986-0ecbbe9a046d)
 
 You can clearly see Decap cells and Tap cells
+
 ![Capture9](https://github.com/sindhuk95/later/assets/135046169/146ceead-f8b2-4e19-b8bb-2468136063ef)
+
+
+
 
 Library Binding and Placement
 
