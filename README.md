@@ -3,6 +3,7 @@ FLOORPLANNING, LIBRARY CELLS and PLACEMENT
 
 Table of contents  
 Floorplanning considerations
+
 Utilization Factor & Aspect Ratio
 When it comes to floorplanning, the shape and size of the fllorplan is decided by Aspect Ratio and how good the floor plan is decided by Utilisation Factor. They are defined as follows:
 
@@ -27,4 +28,21 @@ As we know, there are millions of cells in our design and its hard to supplu pow
 Pin Placement
 
 The netlist is the logical connectivity between cells. The area between the core and die is utilised for placing I/O pins. The connectivity information is defined in either VHDL or Verilog and is used to determine the position of I/O pins of various ports. Then, logical cell placement is bloackage is done inorder to avoid any cells getting placed by automated PnR.
+
+Library Binding and Placement
+
+Netlist Binding and initial place design
+
+First we need to bind the netlist with physical cells. We have shapes for OR, AND and every cell for pratice purpose. But in reality we dont have such shapes, we have give an physical dimensions like rectangles or squares weight and width. This information is given in libs and lefs. Now we place these cells in our design by initilaising it. 
+
+Placement Optimization
+
+The next step is placement. Once we initial the design, the logic cells in netlist in its physical dimisoins is placed on the floorplan. Placement is perfomed in 2 stages:
+
+Global Placement: Cells will be placed randomly in optimal positions which may not be legal and cells may overlap. 
+Detailed Placement: It alters the position of cells post global placement so as to legalise them.
+Legalisation of cells is important from timing point of view.
+Optimization is stage where we estimate the lenght and capictance, based on that we add buffers. Ideally, Optimization is done for better timing.
+
+Need for libraries and characterization
 
