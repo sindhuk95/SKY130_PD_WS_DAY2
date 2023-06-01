@@ -1,9 +1,9 @@
 # SKY130_PD_WS_DAY2
-FLOORPLANNING, LIBRARY CELLS and PLACEMENT
+# FLOORPLANNING, LIBRARY CELLS and PLACEMENT
 
 Table of contents  
 
-# Floorplanning considerations
+ *** Floorplanning considerations ***
 
 ** Utilization Factor & Aspect Ratio  **
 
