@@ -93,19 +93,18 @@ out_fall_thr | 50% value
 
 Propagation Delay :  the time difference between when the transitional input reaches 50% of its final value and when the output reaches 50% of its final value. Poor choice of threshold values lead to negative delay values. Even thought you have taken good threshold values, sometimes depending upon how good or bad the slew, the dealy might be still +ve or -ve.
 
-`
+```
 Propagation delay = time(out_thr) - time(in_thr)
-`
+```
 
 **Transition time or Slew**
 
 
-`
+```
 Rise transition time = time(slew_high_rise_thr) - time (slew_low_rise_thr)
 
 Low transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
-
-`
+```
 
 
 
