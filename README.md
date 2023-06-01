@@ -37,18 +37,21 @@ The netlist is the logical connectivity between cells. The area between the core
 2. ```conifg.tcl```
 3. ```sky130A_sky130_fd_sc_hd_config.tcl```
 * Floorplan envrionment variables or switches:
-1. ```FP_CORE_UTIL``` - floorplan core utilisation
-2. ```FP_ASPECT_RATIO``` - floorplan aspect ratio
-3. ```FP_CORE_MARGIN``` - Core to die margin area
-4. ```FP_IO_MODE``` - defines pin configurations (1 = equidistant/0 = not equidistant)
-5. ```FP_CORE_VMETAL``` - vertical metal layer
-6. ```FP_CORE_HMETAL``` - horizontal metal layer
-7. 
-Note: Usually, vertical metal layer and horizontal metal layer values will be 1 more than that specified in the files***
+1. ```FP_CORE_UTIL``` - core utilization percentage
+2. ```FP_ASPECT_RATIO``` - the cores aspect ratio
+3. ```FP_CORE_MARGIN``` - The length of the margin surrounding the core area
+4. ```FP_IO_MODE``` - defines pin configurations around the core(1 = randomly equidistant/0 = not equidistant)
+5. ```FP_CORE_VMETAL``` - vertical metal layer where I/O pins are placed
+6. ```FP_CORE_HMETAL``` - horizontal metal layer where I/O pins are placed
+ 
+***Note: Usually, the parameter values for vertical metal layer and horizontal metal layer will be 1 more than that specified in the files***
  
  To run the picorv32a floorplan in openLANE:
-
-
+ 
+ ```
+ run_floorplan
+ 
+ ```
 
 Library Binding and Placement
 
