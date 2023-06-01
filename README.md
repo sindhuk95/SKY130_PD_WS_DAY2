@@ -54,6 +54,20 @@ The netlist is the logical connectivity between cells. The area between the core
  run_floorplan
  
  ```
+ 
+ ![Capture10](https://github.com/sindhuk95/later/assets/135046169/cb20dfe1-29f5-40dd-a5c9-af690a1b9a04)
+ 
+Post the floorplan run, a .def file will have been created within the results/floorplan directory. We may review floorplan files by checking the floorplan.tcl. The system defaults will have been overriden by switches set in conifg.tcl and further overriden by switches set in sky130A_sky130_fd_sc_hd_config.tcl.
+
+To view the floorplan, Magic is invoked after moving to the results/floorplan directory:
+
+magic -T /home/vsduser/Desktop/work.tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
+
+![Capture8](https://github.com/sindhuk95/later/assets/135046169/7a6d7cf4-aa7a-49c5-984b-d35a1f01b8d6)
+![Capture7](https://github.com/sindhuk95/later/assets/135046169/c5b43949-39c2-45f6-a986-0ecbbe9a046d)
+
+You can clearly see Decap cells and Tap cells
+![Capture9](https://github.com/sindhuk95/later/assets/135046169/146ceead-f8b2-4e19-b8bb-2468136063ef)
 
 Library Binding and Placement
 
