@@ -3,7 +3,7 @@
 
 Table of contents  
 
- ***  Floorplanning considerations  ***
+ **  Floorplanning considerations  **
 
 **  Utilization Factor & Aspect Ratio  **
 
