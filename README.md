@@ -1,11 +1,11 @@
 # SKY130_PD_WS_DAY2
-# FLOORPLANNING, LIBRARY CELLS and PLACEMENT
+## FLOORPLANNING, LIBRARY CELLS and PLACEMENT
 
 Table of contents  
 
-###  Floorplanning considerations  
+ [Floorplanning considerations]  
 
-## Utilization Factor & Aspect Ratio  
+### Utilization Factor & Aspect Ratio  
 
 When it comes to floorplanning, the shape and size of the fllorplan is decided by Aspect Ratio and how good the floor plan is decided by Utilisation Factor. They are defined as follows:
 
