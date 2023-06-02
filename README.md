@@ -79,7 +79,7 @@ Post the floorplan run, a .def file will have been created within the ```results
 To view the floorplan, Magic is invoked after moving to the results/floorplan directory:
 
 ```
-magic -T /home/vsduser/Desktop/work.tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
 
 ```
 
@@ -97,7 +97,7 @@ The standard cell can be found at the bottom left corner.
 
 ![image](https://github.com/sindhuk95/later/assets/135046169/d0b3526a-989c-4def-b30d-69ac9e85cc8e)
 
-You can clearly see Decap cells and Tap cells. Tap cells are placed in a zig zag manner or you can say diagonally
+You can clearly see /O pins, Decap cells and Tap cells. Tap cells are placed in a zig zag manner or you can say diagonally
 
 ![Capture9](https://github.com/sindhuk95/later/assets/135046169/146ceead-f8b2-4e19-b8bb-2468136063ef)
 
@@ -123,7 +123,7 @@ Optimization is stage where we estimate the lenght and capictance, based on that
 Post placement, the design can be viewed on magic within results/placement directory:
 
 ```
-magic -T /home/vsduser/Desktop/work.tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def
 
 ```
 
