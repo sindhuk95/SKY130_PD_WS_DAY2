@@ -26,9 +26,9 @@
 
 When it comes to floorplanning, the shape and size of the fllorplan is decided by Aspect Ratio and how good the floor plan is decided by Utilisation Factor. They are defined as follows:
 
-Utilisation Factor =  (Area occupied by netlist)/(total Area of the core)
+``` Utilisation Factor =  (Area occupied by netlist)/(total Area of the core)```
                    
-Aspect Ratio = (height/width)
+``` Aspect Ratio = (height/width) ```
 
 A Utilisation Factor of 1 signifies 100% utilisation leaving no place for routing and extra logic. However, In real scenario, the Utilisation Factor will usually be  0.5-0.6 ie., 50 to 60% of the area is used for macros, standard cells and rest is used for routing, extralogic. Likewise, an Aspect ratio of 1 signifies that the chip is square shaped. Any value other than 1 signifies rectanglular chip.
 
