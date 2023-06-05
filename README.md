@@ -83,21 +83,25 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 ```
 
+![Capture8](https://github.com/sindhuk95/later/assets/135046169/7a6d7cf4-aa7a-49c5-984b-d35a1f01b8d6)
+
 One can zoom into Magic layout by selecting an area with left and right mouse click followed by pressing "z" key.
 
 Various components can be identified by using the what command in tkcon window after making a selection on the component.
+
+![Capture7](https://github.com/sindhuk95/later/assets/135046169/c5b43949-39c2-45f6-a986-0ecbbe9a046d)
 
 Zooming in also provides a view of decaps present in picorv32a chip.
 
 The standard cell can be found at the bottom left corner.
 
-![Capture8](https://github.com/sindhuk95/later/assets/135046169/7a6d7cf4-aa7a-49c5-984b-d35a1f01b8d6)
+![standard cells](https://github.com/sindhuk95/SKY130_PD_WS_DAY2/assets/135046169/6c8fc17c-9af1-452e-ab91-6a308676e295)
 
-![Capture7](https://github.com/sindhuk95/later/assets/135046169/c5b43949-39c2-45f6-a986-0ecbbe9a046d)
+
+You can clearly see I/O pins, Decap cells and Tap cells. Tap cells are placed in a zig zag manner or you can say diagonally
 
 ![image](https://github.com/sindhuk95/later/assets/135046169/d0b3526a-989c-4def-b30d-69ac9e85cc8e)
 
-You can clearly see /O pins, Decap cells and Tap cells. Tap cells are placed in a zig zag manner or you can say diagonally
 
 ![Capture9](https://github.com/sindhuk95/later/assets/135046169/146ceead-f8b2-4e19-b8bb-2468136063ef)
 
@@ -127,11 +131,10 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 ```
 
-![image](https://github.com/sindhuk95/later/assets/135046169/d8cf5b7c-1248-4382-8583-9bf9da0dab50)
+![Capture1](https://github.com/sindhuk95/SKY130_PD_WS_DAY2/assets/135046169/63fb5104-9b15-4976-ac85-b5cb84d0273b)
 
-![image](https://github.com/sindhuk95/later/assets/135046169/4146e0ad-475c-4c06-ab11-bc36d9821daf)
 
-*Note: Power distribution network generation is usually a part of the floorplan step. However, in the openLANE flow, floorplan does not generate PDN.  It is created after post CTS. The steps are - floorplan, placement \,CTS, Post CTS and then PDN*
+*Note: Power distribution network generation is usually a part of the floorplan step. However, in the openLANE flow, floorplan does not generate PDN.  It is created after post CTS. The steps are - floorplan, placement, CTS, Post CTS and then PDN**
 
 ### 3. Need for libraries and characterization
 
